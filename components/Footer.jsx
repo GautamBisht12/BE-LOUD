@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 py-12">
+    <footer className="bg-[#5E449D] border-t border-gray-800 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
@@ -18,7 +18,7 @@ const Footer = () => {
                 />
               </span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-white mb-6 max-w-md">
               Making brands loud and clear. We help businesses amplify their
               voice and connect with their audience through innovative digital
               solutions.
@@ -27,54 +27,63 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-white font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="#home"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-white transition-colors duration-200 relative inline-block overflow-hidden group"
                 >
                   Home
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
+
               <li>
                 <Link
                   href="#clients"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-white transition-colors duration-200 relative inline-block overflow-hidden group"
                 >
                   Our Clients
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
+
               <li>
                 <Link
                   href="#services"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-white transition-colors duration-200 relative inline-block overflow-hidden group"
                 >
                   Services
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
+
               <li>
                 <Link
                   href="#projects"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-white transition-colors duration-200 relative inline-block overflow-hidden group"
                 >
                   Projects
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="#testimonials"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-white transition-colors duration-200 relative inline-block overflow-hidden group"
                 >
                   Testimonials
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
               <li>
                 <Link
                   href="#contact"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-white transition-colors duration-200 relative inline-block overflow-hidden group"
                 >
                   Contact
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
             </ul>
@@ -157,7 +166,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-center items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-white text-sm">
               © 2024 BeLoud. All rights reserved. Making brands loud and clear.
             </p>
           </div>
