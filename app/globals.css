@@ -79,34 +79,6 @@
   body {
     @apply bg-background text-foreground;
   }
-}
-
-@keyframes scroll-rtl {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll-rtl {
-  animation: scroll-rtl 10s linear infinite;
-}
-
-.hover\:pause-animation:hover {
-  animation-play-state: paused;
-}
-
-/* Add this to your existing globals.css */
-
-/* Smooth scrolling for the entire document */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom smooth scrolling with easing */
-@media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
@@ -117,9 +89,13 @@ html {
   html {
     scroll-behavior: auto;
   }
+  .animate-scroll-rtl,
+  .animate-scroll {
+    animation: none !important;
+  }
 }
 
-/* Existing animations */
+/* Animation keyframes */
 @keyframes scroll-rtl {
   0% {
     transform: translateX(0);
@@ -127,14 +103,6 @@ html {
   100% {
     transform: translateX(-50%);
   }
-}
-
-.animate-scroll-rtl {
-  animation: scroll-rtl 10s linear infinite;
-}
-
-.hover\:pause-animation:hover {
-  animation-play-state: paused;
 }
 
 @keyframes scroll {
@@ -146,8 +114,17 @@ html {
   }
 }
 
+/* Animation classes */
+.animate-scroll-rtl {
+  animation: scroll-rtl 10s linear infinite;
+  will-change: transform;
+}
+
 .animate-scroll {
-  animation: scroll 20s linear infinite;
-  display: flex;
-  width: 200%; /* Very important: makes room for both original and duplicated content */
+  animation: scroll 8s linear infinite;
+  will-change: transform;
+}
+
+.hover\:pause-animation:hover {
+  animation-play-state: paused;
 }

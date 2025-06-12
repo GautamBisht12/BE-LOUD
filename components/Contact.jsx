@@ -76,7 +76,7 @@ const Contact = () => {
                     onChange={(e) =>
                       setContactForm({ ...contactForm, name: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                    className="w-full px-4 py-3  border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                     required
                   />
                 </div>
@@ -94,7 +94,7 @@ const Contact = () => {
                     onChange={(e) =>
                       setContactForm({ ...contactForm, email: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                    className="w-full px-4 py-3  border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                     required
                   />
                 </div>
@@ -113,7 +113,7 @@ const Contact = () => {
                   onChange={(e) =>
                     setContactForm({ ...contactForm, company: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                  className="w-full px-4 py-3  border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                 />
               </div>
               <div>
@@ -130,13 +130,13 @@ const Contact = () => {
                   onChange={(e) =>
                     setContactForm({ ...contactForm, message: e.target.value })
                   }
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                  className="w-full px-4 py-3  border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                   required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-colors duration-200 flex items-center justify-center"
+                className="w-full bg-gradient-to-r from-[#5E449D] to-[#62D0FA] text-white py-3 px-6 rounded-lg font-medium hover:from-[#5E449D] hover:to-[#5E449D] transition-colors duration-200 flex items-center justify-center"
               >
                 Send Message
                 <Send className="w-5 h-5 ml-2" />

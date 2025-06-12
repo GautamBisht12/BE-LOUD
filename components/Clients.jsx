@@ -48,52 +48,27 @@ const Clients = () => {
         </div>
 
         <div className="overflow-hidden">
-          <div className="animate-scroll">
-            <div className="flex w-full">
-              {clients.map((client, index) => (
-                <div
-                  key={`client-${index}`}
-                  className="flex-shrink-0 w-48 mx-4 relative group"
-                >
-                  <Image
-                    src={client.image}
-                    alt={client.name}
-                    width={400}
-                    height={300}
-                    className="w-full h-40 object-contain p-6 transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 text-white">
-                    <div className="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
-                      <h3 className="text-xl font-bold">{client.name}</h3>
-                      <p className="text-sm">{client.subTitle}</p>
-                    </div>
+          <div className="flex animate-scroll">
+            {[...clients, ...clients].map((client, index) => (
+              <div
+                key={`client-${index}`}
+                className="flex-shrink-0 w-48 mx-4 relative group"
+              >
+                <Image
+                  src={client.image}
+                  alt={client.name}
+                  width={400}
+                  height={300}
+                  className="w-full h-40 object-contain p-6 transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 text-white">
+                  <div className="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 className="text-xl font-bold">{client.name}</h3>
+                    <p className="text-sm">{client.subTitle}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            <div className="flex w-full">
-              {clients.map((client, index) => (
-                <div
-                  key={`client-duplicate-${index}`}
-                  className="flex-shrink-0 w-48 mx-4 relative group"
-                >
-                  <Image
-                    src={client.image}
-                    alt={client.name}
-                    width={400}
-                    height={300}
-                    className="w-full h-40 object-contain p-6 transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 text-white">
-                    <div className="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
-                      <h3 className="text-xl font-bold">{client.name}</h3>
-                      <p className="text-sm">{client.subTitle}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
